@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "645137777464",
+    "firebase_url": "https://coffeecocoa-a4560-default-rtdb.firebaseio.com",
+    "project_id": "coffeecocoa-a4560",
+    "storage_bucket": "coffeecocoa-a4560.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:645137777464:android:a6559bd5890e38673af7cd",
+        "android_client_info": {
+          "package_name": "dev4passion.coffeecocoa"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAAjeOP0ET_Kd52sUDuBOooUt_C3RYo1iQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
