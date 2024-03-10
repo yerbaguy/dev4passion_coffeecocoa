@@ -35,6 +35,7 @@ import AppNavigator from './src/AppNavigator';
 import Login from './src/screens/Login';
 import Register from './src/screens/Register';
 import Header from './src/screens/Header';
+import AddProduct from './src/screens/AddProduct';
 //import Upper from './src/screens/Upper';
 //import Headerr from './src/screens/Headerr';
 
@@ -98,6 +99,7 @@ const HomeScreen = () => {
     <Drawer.Navigator initialRouteName="Main">
       <Drawer.Screen name="Main" component={MainScreen} />
       <Drawer.Screen name="Account" component={Account} />
+      <Drawer.Screen name="Add Product" component={AddProduct} />
 
       {/* <Drawer.Screen name="DummyHome" component={MainScreen} /> */}
       {/* <Drawer.Screen name="SettingsScreen" component={SettingsScreen} /> */}
