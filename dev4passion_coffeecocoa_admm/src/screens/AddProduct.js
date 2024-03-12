@@ -62,10 +62,18 @@ const AddProduct = () => {
       // categoryId: userId,
       // categoryName: categoryName
 
-      productDescription: productDescription,
-      farm: farm,
-      farmer: farmer,
-      roaster: roaster
+      coffeeType: 'coffee roasted',
+      coffee: {
+        productDescription: productDescription,
+        farm: farm,
+        farmer: farmer,
+        roaster: roaster
+      }
+
+      // productDescription: productDescription,
+      // farm: farm,
+      // farmer: farmer,
+      // roaster: roaster
 
     })
       .then(() => {
@@ -73,6 +81,66 @@ const AddProduct = () => {
       })
   }
 
+
+  const addCoffeeGreen = () => {
+
+
+    firestore().collection('products').add({
+      // email: email,
+      // password: password
+
+      // categoryId: userId,
+      // categoryName: categoryName
+
+      coffeeType: 'coffee green',
+      coffee: {
+        productDescription: productDescription,
+        farm: farm,
+        farmer: farmer,
+        // roaster: roaster
+      }
+
+      // productDescription: productDescription,
+      // farm: farm,
+      // farmer: farmer,
+      // roaster: roaster
+
+    })
+      .then(() => {
+        console.log("Added")
+      })
+
+  }
+
+  const addCoffeeRoasted = () => {
+
+    firestore().collection('products').add({
+      // email: email,
+      // password: password
+
+      // categoryId: userId,
+      // categoryName: categoryName
+
+      coffeeType: 'coffee roasted',
+      coffee: {
+        productDescription: productDescription,
+        farm: farm,
+        farmer: farmer,
+        roaster: roaster
+      }
+
+      // productDescription: productDescription,
+      // farm: farm,
+      // farmer: farmer,
+      // roaster: roaster
+
+    })
+      .then(() => {
+        console.log("Added")
+      })
+
+
+  }
 
 
   return (
@@ -138,10 +206,23 @@ const AddProduct = () => {
           <TextInput value={productName} onChangeText={(productName) => { setProductName(productName) }} placeholder="product name"></TextInput>
           <TextInput value={productName} onChangeText={(productName) => { setProductName(productName) }} placeholder="product name"></TextInput> */}
 
+          <TouchableOpacity onPress={() => { addCoffeeRoasted(); }}><Text>Submit Data</Text></TouchableOpacity>
 
 
 
-        </View> : null}
+        {/* </View> : null} */}
+        </View> : <View>
+          
+            <TextInput value={productDescription} onChangeText={(productDescription) => { setProductDescription(productDescription) }} placeholder="product description"></TextInput>
+            <TextInput value={farm} onChangeText={(farm) => { setFarm(farm) }} placeholder="farm"></TextInput>
+            <TextInput value={farmer} onChangeText={(farmer) => { setFarmer(farmer) }} placeholder="farmer"></TextInput>
+            {/* <TextInput value={roaster} onChangeText={(roaster) => { setRoaster(roaster) }} placeholder="roaster"></TextInput> */}
+
+            <TouchableOpacity onPress={() => { addCoffeeGreen(); }}><Text>Submit Data</Text></TouchableOpacity>
+
+
+
+          </View>}
 
 
 

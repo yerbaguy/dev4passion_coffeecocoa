@@ -10,6 +10,7 @@ import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createDrawerNavigator } from '@react-navigation/drawer';
+import { useNavigation } from '@react-navigation/native';
 import type {Node} from 'react';
 import {
   SafeAreaView,
@@ -24,10 +25,15 @@ import {
 import {
   Colors,
   DebugInstructions,
-  Header,
+  // Header,
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
+
+import Header from './src/screens/Header';
+import Main from './src/screens/Main';
+import Account from './src/screens/Account';
+import AddProduct from './src/screens/AddProduct';
 
 /* $FlowFixMe[missing-local-annot] The type annotation(s) required by Flow's
  * LTI update could not be added via codemod */
@@ -57,25 +63,51 @@ const Section = ({children, title}): Node => {
   );
 };
 
+// const HomeScreen = () => {
+//  return (
+//     <Drawer.Navigator>
+//       <Drawer.Screen name="Feed" component={Feed} />
+//       <Drawer.Screen name="Article" component={Article} />
+//     </Drawer.Navigator>
+// )
+// }
+
 const HomeScreen = () => {
- return (
-    <Drawer.Navigator>
-      <Drawer.Screen name="Feed" component={Feed} />
-      <Drawer.Screen name="Article" component={Article} />
+  return (
+    // <Drawer.Navigator initialRouteName="DummyHome">
+    <Drawer.Navigator initialRouteName="Main">
+      <Drawer.Screen name="Main" component={Main} />
+      <Drawer.Screen name="Account" component={Account} />
+      <Drawer.Screen name="Add Product" component={AddProduct} />
+
+      {/* <Drawer.Screen name="DummyHome" component={MainScreen} /> */}
+      {/* <Drawer.Screen name="SettingsScreen" component={SettingsScreen} /> */}
+
+
+      {/* here       */}
+      {/* <Drawer.Screen name="Add Categories" component={AddCategories} />
+      <Drawer.Screen name="Add Products" component={AddProducts} /> */}
+      {/* here */}
     </Drawer.Navigator>
-)
+  )
 }
 
 const SettingsScreen = () => {
+  const navigation = useNavigation();
  return (
-  <View><Text>Settings Screen</Text></View>
+  <View>
+    <Header navigation = {navigation}/>
+    <Text>Settings Screen</Text></View>
 )
 }
 
 
 const Feed = () => {
+  const navigation = useNavigation();
  return (
- <View><Text>Feed</Text></View>
+ <View>
+   <Header navigation = {navigation} />
+  <Text>Feed</Text></View>
 )
 }
 
