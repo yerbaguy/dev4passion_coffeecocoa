@@ -126,7 +126,28 @@ const AddProduct = () => {
         productDescription: productDescription,
         farm: farm,
         farmer: farmer,
-        roaster: roaster
+        roaster: roaster,
+
+        // dealer: dealer,
+        // brand: brand,
+        // origin: origin,
+        // typeOfCoffee: typeOfCoffee,
+        // variety: variety,
+        // processingMethods: processingMethods,
+        // altitude: altitude,
+        // soilType: soilType,
+        // harvestDate: harvestDate,
+        // roastingDate, roastingDate,
+        // roastingType: roastingType,
+        // preparationType: preparationType,
+        // puncationSCAA: punctationSCAA,
+        // tasteOfCoffee: tasteOfCoffee,
+        // powerOfCaffeine: powerOfCaffeine,
+        // acidity: acidity,
+        // bitterness: bitterness,
+        // balance: balance,
+        // aroma: aroma
+
       }
 
       // productDescription: productDescription,
@@ -155,16 +176,16 @@ const AddProduct = () => {
         >
           <View style={{ flexDirection: 'row', alignItems: 'center' }}>
             <RadioButton value="option1" color="blue" />
-            <Text>Option 1</Text>
+            <Text>Option 1/ Kawa palona</Text>
           </View>
           <View style={{ flexDirection: 'row', alignItems: 'center' }}>
             <RadioButton value="option2" color="red" />
-            <Text>Option 2</Text>
+            <Text>Option 2 / Kawa zielona</Text>
           </View>
-          <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+          {/* <View style={{ flexDirection: 'row', alignItems: 'center' }}>
             <RadioButton value="option3" color="green" />
             <Text>Option 3</Text>
-          </View>
+          </View> */}
         </RadioButton.Group>
         <Text>Selected Value: {selectedValue}</Text>
         {/* { selectedValue == "option1" ? <Text>lakjsd</Text> : null } */}
@@ -206,7 +227,7 @@ const AddProduct = () => {
           <TextInput value={productName} onChangeText={(productName) => { setProductName(productName) }} placeholder="product name"></TextInput>
           <TextInput value={productName} onChangeText={(productName) => { setProductName(productName) }} placeholder="product name"></TextInput> */}
 
-          <TouchableOpacity onPress={() => { addCoffeeRoasted(); }}><Text>Submit Data</Text></TouchableOpacity>
+          <TouchableOpacity onPress={() => { addCoffeeRoasted(); }}><Text>Submit Dataaaaa</Text></TouchableOpacity>
 
 
 
@@ -218,7 +239,7 @@ const AddProduct = () => {
             <TextInput value={farmer} onChangeText={(farmer) => { setFarmer(farmer) }} placeholder="farmer"></TextInput>
             {/* <TextInput value={roaster} onChangeText={(roaster) => { setRoaster(roaster) }} placeholder="roaster"></TextInput> */}
 
-            <TouchableOpacity onPress={() => { addCoffeeGreen(); }}><Text>Submit Data</Text></TouchableOpacity>
+            <TouchableOpacity onPress={() => { addCoffeeGreen(); }}><Text>Submit Dataaaaa</Text></TouchableOpacity>
 
 
 
@@ -226,7 +247,7 @@ const AddProduct = () => {
 
 
 
-        <Button
+        {/* <Button
           title="Perform Action"
           onPress={() => {
             // You can perform an action based on the selected value here as well
@@ -248,9 +269,11 @@ const AddProduct = () => {
                 break;
             }
           }}
-        />
+        /> */}
+
+
       </View>
-      <TouchableOpacity onPress={() => { addProduct(); }}><Text>Submit Data</Text></TouchableOpacity>
+      {/* <TouchableOpacity onPress={() => { addProduct(); }}><Text>Submit Data</Text></TouchableOpacity> */}
 
     </ScrollView>
    
