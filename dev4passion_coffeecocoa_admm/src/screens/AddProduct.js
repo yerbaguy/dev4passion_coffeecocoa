@@ -176,11 +176,13 @@ const AddProduct = () => {
         >
           <View style={{ flexDirection: 'row', alignItems: 'center' }}>
             <RadioButton value="option1" color="blue" />
-            <Text>Option 1/ Kawa palona</Text>
+            {/* <Text>Option 1/ Kawa palona</Text> */}
+            <Text>Option 1/ Roasted Coffee</Text>
           </View>
           <View style={{ flexDirection: 'row', alignItems: 'center' }}>
             <RadioButton value="option2" color="red" />
-            <Text>Option 2 / Kawa zielona</Text>
+            {/* <Text>Option 2 / Kawa zielona</Text> */}
+            <Text>Option 2 / Green Coffee</Text>
           </View>
           {/* <View style={{ flexDirection: 'row', alignItems: 'center' }}>
             <RadioButton value="option3" color="green" />
@@ -190,10 +192,10 @@ const AddProduct = () => {
         <Text>Selected Value: {selectedValue}</Text>
         {/* { selectedValue == "option1" ? <Text>lakjsd</Text> : null } */}
         {selectedValue == "option1" ? <View>
-          <TextInput value={productDescription} onChangeText={(productDescription) => { setProductDescription(productDescription) }} placeholder="product description"></TextInput>
-          <TextInput value={farm} onChangeText={(farm) => { setFarm(farm) }} placeholder="farm"></TextInput>
-          <TextInput value={farmer} onChangeText={(farmer) => { setFarmer(farmer) }} placeholder="farmer"></TextInput>
-          <TextInput value={roaster} onChangeText={(roaster) => { setRoaster(roaster) }} placeholder="roaster"></TextInput>
+          <TextInput value={productDescription} onChangeText={(productDescription) => { setProductDescription(productDescription) }} placeholder="product description" style={styles.coffeeRoastedProductDescription}></TextInput>
+          <TextInput value={farm} onChangeText={(farm) => { setFarm(farm) }} placeholder="farm" style={styles.coffeeRoastedFarm}></TextInput>
+          <TextInput value={farmer} onChangeText={(farmer) => { setFarmer(farmer) }} placeholder="farmer" style={styles.coffeeRoastedFarmer}></TextInput>
+          <TextInput value={roaster} onChangeText={(roaster) => { setRoaster(roaster) }} placeholder="roaster" style={styles.coffeeRoastedRoaster}></TextInput>
           {/* <TextInput value={productName} onChangeText={(productName) => { setProductName(productName) }} placeholder="product name"></TextInput>
           <TextInput value={productName} onChangeText={(productName) => { setProductName(productName) }} placeholder="product name"></TextInput>
           <TextInput value={productName} onChangeText={(productName) => { setProductName(productName) }} placeholder="product name"></TextInput>
@@ -227,7 +229,9 @@ const AddProduct = () => {
           <TextInput value={productName} onChangeText={(productName) => { setProductName(productName) }} placeholder="product name"></TextInput>
           <TextInput value={productName} onChangeText={(productName) => { setProductName(productName) }} placeholder="product name"></TextInput> */}
 
-          <TouchableOpacity onPress={() => { addCoffeeRoasted(); }}><Text>Submit Dataaaaa</Text></TouchableOpacity>
+          {/* <TouchableOpacity onPress={() => { addCoffeeRoasted(); }} style={styles.addCoffeeRoastedData}><Text>Submit Dataaaaa</Text></TouchableOpacity> */}
+          <TouchableOpacity onPress={() => { addCoffeeRoasted(); }} style={styles.addCoffeeRoastedData}><Text>Submit Data</Text></TouchableOpacity>
+
 
 
 
@@ -315,6 +319,67 @@ const styles = StyleSheet.create({
     width: 28,
     margin: 3,
     borderRadius: 20
+  },
+  
+  coffeeRoastedProductDescription: {
+    width: '90%',
+    height: 50,
+    borderRadius: 10,
+    borderWidth: 0.5,
+    paddingLeft: 20,
+    paddingRight: 20,
+    marginTop: 30,
+    alignSelf: 'center'
+
+  },
+
+
+  coffeeRoastedFarm: {
+    width: '90%',
+    height: 50,
+    borderRadius: 10,
+    borderWidth: 0.5,
+    paddingLeft: 20,
+    paddingRight: 20,
+    marginTop: 30,
+    alignSelf: 'center'
+
+  },
+
+
+  coffeeRoastedFarmer: {
+    width: '90%',
+    height: 50,
+    borderRadius: 10,
+    borderWidth: 0.5,
+    paddingLeft: 20,
+    paddingRight: 20,
+    marginTop: 30,
+    alignSelf: 'center'
+
+  },
+  
+  coffeeRoastedRoaster: {
+    width:'90%',
+    height: 50,
+    borderRadius: 10,
+    borderWidth: 0.5,
+    paddingLeft: 20,
+    paddingRight: 20,
+    marginTop: 30,
+    alignSelf: 'center'
+
+  },
+
+  addCoffeeRoastedData: {
+    width: '90%',
+    height: 50,
+    borderWidth: 0.5,
+    borderRadius: 10,
+    alignSelf: 'center',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: 20
   }
 
 });
